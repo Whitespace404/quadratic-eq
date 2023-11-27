@@ -43,7 +43,10 @@ class QuadraticEquationGame:
         self.button_submit.pack()
 
         self.correct = tk.Button(
-            root, text="Correct", command=self.display_result, font=("Helvetica", 18)
+            root,
+            text="Mark as correct",
+            command=self.display_result,
+            font=("Helvetica", 18),
         )
 
         self.start_time = 0
@@ -61,7 +64,7 @@ class QuadraticEquationGame:
         self.wx = self.fig.add_subplot(111)
 
         self.wx.clear()
-        self.wx.text(0.2, 0.6, tmptext, fontsize=20)
+        self.wx.text(0.5, 0.5, tmptext, fontsize=20)
         self.canvas = FigureCanvasTkAgg(self.fig, master=self.label)
         self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
         self.canvas._tkcanvas.pack(side=tk.TOP, fill=tk.BOTH, expand=1)
